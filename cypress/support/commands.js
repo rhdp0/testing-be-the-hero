@@ -26,19 +26,20 @@
 
 Cypress.Commands.add("createOng", () => {
     cy.request({
-        method: 'POST',
+        method: "POST",
         url: 'http://localhost:3333/ongs',
         body: {
-            name: "Gatos queridos",
-            email: "gatos@mail.com",
-            whatsapp: "519999999999",
-            city: "Porto Alegre",
-            uf: "RS"    
+            city: "Carpina",
+            email: "gatos@email.com",
+            name: "Gatos Queridos",
+            uf: "PE",
+            whatsapp: "81999999999"
         }
     }).then(response => {
         expect(response.body.id).is.not.null;
-        cy.log(response.body.id);
+        cy.log(response.body.id)
 
-        Cypress.env('createdOngId', response.body.id);
-    });
+        // Salva como variável temporária
+        Cypress.env('createdOngId', response.body.id)
+    })
 })

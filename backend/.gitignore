@@ -1,5 +1,7 @@
 node_modules/**/*
 npm-debug.*
 
+.npmrc
+
 # macOS
 .DS_Store

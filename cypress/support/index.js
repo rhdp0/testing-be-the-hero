@@ -20,7 +20,7 @@ import './commands'
 // require('./commands')
 
 before(() => {
-    // cy.server - para route e request
-    cy.server();
-    cy.createOng();
-});
+    // cy.server = para route e request
+    cy.server()
+    cy.createOng()
+})
